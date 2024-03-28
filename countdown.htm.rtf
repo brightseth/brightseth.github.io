@@ -1,0 +1,66 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red12\green12\blue12;\red39\green129\blue201;
+\red255\green255\blue255;\red212\green20\blue102;\red20\green152\blue106;\red235\green16\blue47;\red226\green131\blue14;
+}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000\c60000;\cssrgb\c5098\c5098\c5098;\cssrgb\c18039\c58431\c82745;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c87451\c18824\c47451;\cssrgb\c0\c65098\c49020;\cssrgb\c94902\c17255\c23922;\cssrgb\c91373\c58431\c4706;
+}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+<!DOCTYPE \cf4 html\cf2 >\cf5 \
+<html \cf6 lang\cf5 =\cf7 "en"\cf5 >\
+<head>\
+<meta \cf6 charset\cf5 =\cf7 "UTF-8"\cf5 >\
+<meta \cf6 name\cf5 =\cf7 "viewport"\cf5  \cf6 content\cf5 =\cf7 "width=device-width, initial-scale=1.0"\cf5 >\
+<title>Countdown to AI Art Berlin Opening Night</title>\
+<style>\
+  body \{\
+    \cf7 font-family\cf5 : Arial, sans-serif;\
+    \cf7 display\cf5 : flex;\
+    \cf7 justify-content\cf5 : center;\
+    \cf7 align-items\cf5 : center;\
+    \cf7 height\cf5 : \cf6 100vh\cf5 ;\
+    \cf7 background-color\cf5 : \cf6 #282c34\cf5 ;\
+    \cf7 color\cf5 : \cf6 #ffffff\cf5 ;\
+  \}\
+\
+  \cf8 #countdown\cf5  \{\
+    \cf7 text-align\cf5 : center;\
+  \}\
+</style>\
+</head>\
+<body>\
+<div \cf6 id\cf5 =\cf7 "countdown"\cf5 >\
+  <h1>Countdown to AI Art Berlin at Kraftwerk</h1>\
+  <h2 \cf6 id\cf5 =\cf7 "timer"\cf5 ></h2>\
+</div>\
+\
+<script>\
+  \cf4 function\cf5  \cf8 updateCountdown\cf5 () \{\
+    \cf4 const\cf5  countdownDate = \cf4 new\cf5  \cf8 Date\cf5 (\cf7 "May 14, 2025 20:00:00"\cf5 ).\cf8 getTime\cf5 ();\
+    \cf4 const\cf5  now = \cf4 new\cf5  \cf8 Date\cf5 ().\cf8 getTime\cf5 ();\
+    \cf4 const\cf5  difference = countdownDate - now;\
+\
+    \cf4 const\cf5  days = \cf8 Math\cf5 .\cf8 floor\cf5 (difference / (\cf6 1000\cf5  * \cf6 60\cf5  * \cf6 60\cf5  * \cf6 24\cf5 ));\
+    \cf4 const\cf5  hours = \cf8 Math\cf5 .\cf8 floor\cf5 ((difference % (\cf6 1000\cf5  * \cf6 60\cf5  * \cf6 60\cf5  * \cf6 24\cf5 )) / (\cf6 1000\cf5  * \cf6 60\cf5  * \cf6 60\cf5 ));\
+    \cf4 const\cf5  minutes = \cf8 Math\cf5 .\cf8 floor\cf5 ((difference % (\cf6 1000\cf5  * \cf6 60\cf5  * \cf6 60\cf5 )) / (\cf6 1000\cf5  * \cf6 60\cf5 ));\
+    \cf4 const\cf5  seconds = \cf8 Math\cf5 .\cf8 floor\cf5 ((difference % (\cf6 1000\cf5  * \cf6 60\cf5 )) / \cf6 1000\cf5 );\
+\
+    \cf6 document\cf5 .\cf8 getElementById\cf5 (\cf7 "timer"\cf5 ).innerHTML = days + \cf7 "d "\cf5  + hours + \cf7 "h "\cf5 \
+    + minutes + \cf7 "m "\cf5  + seconds + \cf7 "s "\cf5 ;\
+\
+    \cf4 if\cf5  (difference < \cf6 0\cf5 ) \{\
+      \cf9 clearInterval\cf5 (x);\
+      \cf6 document\cf5 .\cf8 getElementById\cf5 (\cf7 "timer"\cf5 ).innerHTML = \cf7 "The event has started!"\cf5 ;\
+    \}\
+  \}\
+\
+  \cf8 updateCountdown\cf5 ();\
+  \cf4 const\cf5  x = \cf9 setInterval\cf5 (updateCountdown, \cf6 1000\cf5 );\
+</script>\
+</body>\
+</html>}
